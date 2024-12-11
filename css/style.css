@@ -12,7 +12,7 @@ header {
 
 .headerimage {
     max-width: 100%;
-    background: url('/images/HeaderImage.png') no-repeat center;
+    background: url('../images/HeaderImage.png') no-repeat center;
     background-size: cover;
 }
 
