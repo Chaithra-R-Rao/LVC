@@ -1,0 +1,144 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    /* align-items: center; */
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #4e4caf;
+    /* color: #4CAF50; */
+}
+
+video {
+    position: relative;
+    animation: moveToCenter 1.5s ease-in-out forwards; /* Animate movement */
+}
+
+/* Keyframes for animation */
+@keyframes moveToCenter {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the left */
+    } 
+    100% {
+        transform: translateX(0); /* Centered */
+    }
+}
+/* Form container */
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.content-container{
+    width:400px;
+}
+
+/* Form elements */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Gender options */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="radio"] + label {
+    margin-right: 15px;
+}
+
+/* Checkbox list */
+li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4e4caf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #39217c;
+    /* background-color: #45a049; */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+}
+
+/* For Contact Us */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+iframe{
+    height:350px;
+    width:45%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack iframe and form vertically */
+    }
+
+    iframe,
+    .contact-form-container {
+        width: 100%; /* Take full width on smaller screens */
+    }
+
+    
+   video,.content-container{
+    width:100%;
+}
+
+}
+/* 
+.center{
+    text-align: center;
+} */

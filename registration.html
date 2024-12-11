@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+    <h2>
+        Registration
+    </h2>
+    <div>
+    <form action="#" method="POST">
+        <label for="fname">First name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter name here" required><br>
+
+        <label for="lname">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email here"required><br>
+
+        
+        <label for="courses"> Gender</label>
+        <input type="radio" name="Gender" value="Male"> Male
+        <input type="radio" name="Gender" value="Female"> Female
+        <br><br>
+
+        <label for="courses"> Courses</label>
+        <select name="courses" id="courses">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">Java Script</option>
+            <option value="angular">Angular</option>
+        </select>
+
+        <label for="remarks"> Remarks</label>
+        <textarea name="remarks"  rows="4"></textarea>
+        <br><br>
+
+        <label for="hobbies"> Hobbies</label>
+        <li><input type="checkbox" name="hobbies" value="Singing" />Singing</li>
+        <li><input type="checkbox" name="hobbies" value="Dancing" />Dancing</li>
+        <li><input type="checkbox" name="hobbies" value="Swimming" />Swimming</li>
+        <br>
+
+        <input type="submit" value="Submit">
+      
+    </form>
+</div>
+
+</body>
+
+</html>

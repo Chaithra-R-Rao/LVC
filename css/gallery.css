@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+h2 {
+    text-align: center;
+    color: #4e4caf;
+    /* color: #4CAF50; */
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td a {
+    color: #3f3e9b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+#photo-display {
+    margin-top: 30px;
+}
+
+#photo-display img {
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+#photo-display p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+iframe{
+    width:150px;
+     height:170px;
+     filter:grayscale(70%);
+}
+iframe:hover{
+    filter:grayscale(0%);
+}
+
+/* Video container style */
+.video-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+    height: 100%;
+    width: 100%;
+}
+ 
+/* Hide video iframe and show message by default */
+.video-container {
+    display: block;
+}
+ 
+.video-container iframe {
+    display: none;
+    border-radius: 15px; /* Adding rounded borders to the iframe */
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade-in and slide effect */
+    transform: scale(0.9); /* Initial scale (shrink slightly) */
+}
+ 
+.video-container:target iframe {
+    display: block;
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Return to normal size */
+}
+ 
+.video-container:target .video-message {
+    display: none;
+}
