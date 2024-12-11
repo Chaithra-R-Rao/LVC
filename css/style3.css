@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    
+
     color: navy;
     margin: 20px 0;
 }
@@ -24,7 +24,8 @@ h1 {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
 }
 
 
@@ -44,25 +45,20 @@ h1 {
     font-weight: bold;
     text-decoration: none;
     color: #4e4caf;
-
-    /* color: #007bff; */
 }
 
 .topic-block:hover {
     background-color: #4e4caf;
-
-    /* background-color: #007bff; */
     color: white;
     transform: scale(1.05);
 }
 
 .topic-block.active {
     background-color: #4e4caf;
-
-    /* background-color: #007bff; */
     color: white;
     border-color: #0056b3;
 }
+
 /* Iframe Styling */
 iframe {
     width: 80%;

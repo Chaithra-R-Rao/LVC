@@ -2,8 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:#f4f4f9;
-
+    background-color: #f4f4f9;
 }
 
 header {
@@ -13,8 +12,7 @@ header {
 
 .headerimage {
     max-width: 100%;
-    
-    background:   url('/images/Image.png') no-repeat center ;
+    background: url('/images/HeaderImage.png') no-repeat center;
     background-size: cover;
 }
 
@@ -24,7 +22,6 @@ header {
     align-items: center;
     padding: 0;
     background-color: navy;
-    /* padding: 10px 20px; */
 }
 
 nav {
@@ -35,7 +32,6 @@ nav {
     display: flex;
     list-style: none;
     color: white;
-
 }
 
 .nav-list li {
@@ -75,18 +71,21 @@ nav {
     color: navy;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-left: 20px;
-    /* animation: zoomInOut 1s infinite; */
 }
 
 @keyframes zoomInOut {
     0% {
         transform: scale(1);
     }
+
     50% {
-        transform: scale(1.2); /* Zoom in */
+        transform: scale(1.2);
+        /* Zoom in */
     }
+
     100% {
-        transform: scale(1); /* Zoom out */
+        transform: scale(1);
+        /* Zoom out */
     }
 }
 
@@ -148,12 +147,11 @@ p {
     text-align: center;
 }
 
-.important-course{
+.important-course {
     animation: zoomInOut 1s infinite;
 
 
 }
-
 
 
 /* Responsive Design */
@@ -182,7 +180,8 @@ p {
     }
 
     .welcome {
-        flex-direction: column;  /* Stack articles vertically */
+        flex-direction: column;
+        /* Stack articles vertically */
         font-size: 20px;
         padding: 10px;
     }
@@ -207,6 +206,7 @@ p {
 
 @media (min-width: 768px) and (max-width: 1000px) {
     iframe {
-        height: 400px; /* Increased height for medium-sized screens */
+        height: 400px;
+        /* Increased height for medium-sized screens */
     }
 }

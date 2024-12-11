@@ -3,30 +3,33 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f9;
-    /* align-items: center; */
     color: #333;
 }
 
 h2 {
     text-align: center;
     color: #4e4caf;
-    /* color: #4CAF50; */
 }
 
 video {
     position: relative;
-    animation: moveToCenter 1.5s ease-in-out forwards; /* Animate movement */
+    animation: moveToCenter 1.5s ease-in-out forwards;
+    /* Animate movement */
 }
 
 /* Keyframes for animation */
 @keyframes moveToCenter {
     0% {
-        transform: translateX(100%); /* Start off-screen to the left */
-    } 
+        transform: translateX(100%);
+        /* Start off-screen to the left */
+    }
+
     100% {
-        transform: translateX(0); /* Centered */
+        transform: translateX(0);
+        /* Centered */
     }
 }
+
 /* Form container */
 form {
     width: 400px;
@@ -37,9 +40,8 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.content-container{
-    width:400px;
+.content-container {
+    width: 400px;
 }
 
 /* Form elements */
@@ -65,7 +67,7 @@ input[type="radio"] {
     margin-right: 5px;
 }
 
-input[type="radio"] + label {
+input[type="radio"]+label {
     margin-right: 15px;
 }
 
@@ -112,33 +114,31 @@ input[type="submit"]:hover {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
 }
 
-iframe{
-    height:350px;
-    width:45%;
+iframe {
+    height: 350px;
+    width: 45%;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack iframe and form vertically */
+        flex-direction: column;
+        /* Stack iframe and form vertically */
     }
 
     iframe,
     .contact-form-container {
-        width: 100%; /* Take full width on smaller screens */
+        width: 100%;
+        /* Take full width on smaller screens */
     }
 
-    
-   video,.content-container{
-    width:100%;
-}
+    video,
+    .content-container {
+        width: 100%;
+    }
 
 }
-/* 
-.center{
-    text-align: center;
-} */

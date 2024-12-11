@@ -19,7 +19,8 @@ table {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
@@ -56,13 +57,14 @@ td a:hover {
     font-size: 18px;
 }
 
-iframe{
-    width:150px;
-     height:170px;
-     filter:grayscale(70%);
+iframe {
+    width: 150px;
+    height: 170px;
+    filter: grayscale(70%);
 }
-iframe:hover{
-    filter:grayscale(0%);
+
+iframe:hover {
+    filter: grayscale(0%);
 }
 
 /* Video container style */
@@ -75,26 +77,32 @@ iframe:hover{
     height: 100%;
     width: 100%;
 }
- 
+
 /* Hide video iframe and show message by default */
 .video-container {
     display: block;
 }
- 
+
 .video-container iframe {
     display: none;
-    border-radius: 15px; /* Adding rounded borders to the iframe */
-    opacity: 0; /* Initially set opacity to 0 */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade-in and slide effect */
-    transform: scale(0.9); /* Initial scale (shrink slightly) */
+    border-radius: 15px;
+    /* Adding rounded borders to the iframe */
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth fade-in and slide effect */
+    transform: scale(0.9);
+    /* Initial scale (shrink slightly) */
 }
- 
+
 .video-container:target iframe {
     display: block;
-    opacity: 1; /* Fade in */
-    transform: scale(1); /* Return to normal size */
+    opacity: 1;
+    /* Fade in */
+    transform: scale(1);
+    /* Return to normal size */
 }
- 
+
 .video-container:target .video-message {
     display: none;
 }
