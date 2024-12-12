@@ -8,7 +8,6 @@ body {
 h2 {
     text-align: center;
     color: #4e4caf;
-    /* color: #4CAF50; */
 }
 
 table {
@@ -27,7 +26,15 @@ td {
 }
 
 th {
-    background-color: #f4f4f4;
+        color: #f4f4f4; 
+    	/* Fallback for browsers that don't support gradients */
+		background:#4286f4;
+		/* For Safari 5.1 to 6.0 */
+		background: -webkit-linear-gradient(bottom left, #373B44,#4286f4);
+		/* For Internet Explorer 10 */
+		background: -ms-linear-gradient(bottom left,#373B44,#4286f4);
+		/* Standard syntax */
+		background: linear-gradient(to top right,#373B44, #4286f4);
 }
 
 td a {
