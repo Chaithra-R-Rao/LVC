@@ -16,47 +16,38 @@ header {
     background-size: cover;
 }
 
-.navigation {
-    display: flex;
-    position: sticky;
-    align-items: center;
-    padding: 0;
-    background-color: navy;
-}
 
-nav {
-    padding: 0;
-}
-
-.nav-list {
-    display: flex;
-    list-style: none;
-    color: white;
-}
-
-.nav-list li {
-    display: inline-block;
-    border-radius: 5px;
-    margin-right: 30px;
-}
-
-.nav-list ul {
-    padding: 0;
-}
-
-.nav-list li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 10px 15px;
-}
-
-.nav-list li a:hover {
-    transform: scale(1.1);
-    background-color: rgb(28, 31, 31);
+.navbar {
+    background-color: navy !important;
+    /* Ensures background color is navy */
 
 }
 
+.navbar .nav-item {
+    color: white !important;
+    padding: 10px 15px !important;
+
+}
+
+.nav-item :hover {
+    color: rgb(53, 54, 54) !important;
+    background-color: rgb(237, 243, 243);
+    
+}
+.nav-item a:hover{
+    color: rgb(53, 54, 54) !important;
+}
+
+
+.navbar .nav-link {
+    color: white !important;
+    /* Sets the text color of navigation links to white */
+}
+
+.navbar .navbar-toggler-icon {
+    color: white !important;
+    /* Ensures the toggle icon is visible on the navy background */
+}
 
 .welcome {
     display: flex;
@@ -64,8 +55,6 @@ nav {
     align-items: center;
     font-size: 25px;
     padding: 20px;
-
-    
 
 }
 
@@ -147,7 +136,7 @@ footer {
 p {
     padding: 0;
     text-align: center;
-    
+
 }
 
 .important-course {

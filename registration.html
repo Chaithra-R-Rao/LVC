@@ -6,49 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="css/style2.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <h2>
         Registration
     </h2>
-    <div>
+    <div class="container mt-5">
         <form action="#" method="POST">
-            <label for="fname">First name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter name here" required><br>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here"
+                    required>
+            </div>
 
-            <label for="lname">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter email here" required><br>
 
+            <div class="mb-3">
+                <label class="form-label">Gender:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="male" value="Male">Male
+                    <!-- <label class="form-check-label" for="male">Male</label> -->
 
-            <label for="courses"> Gender</label>
-            <input type="radio" name="Gender" value="Male"> Male
-            <input type="radio" name="Gender" value="Female"> Female
-            <br><br>
-
-            <label for="courses"> Courses</label>
-            <select name="courses" id="courses">
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="js">Java Script</option>
-                <option value="angular">Angular</option>
-            </select>
-
-            <label for="remarks"> Remarks</label>
-            <textarea name="remarks" rows="4"></textarea>
-            <br><br>
-
-            <label for="hobbies"> Hobbies</label>
-            <li><input type="checkbox" name="hobbies" value="Singing" />Singing</li>
-            <li><input type="checkbox" name="hobbies" value="Dancing" />Dancing</li>
-            <li><input type="checkbox" name="hobbies" value="Swimming" />Swimming</li>
+                    <input class="form-check-input" type="radio" name="Gender" id="female" value="Female">Female
+                    <!-- <label class="form-check-label" for="female">Female</label> -->
+                </div>
+            </div>
             <br>
+            <div class="mb-3">
+                <label for="courses" class="form-label">Courses:</label>
+                <select class="form-select" id="courses" name="courses">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="angular">Angular</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="remarks" class="form-label">Remarks:</label>
+                <textarea class="form-control" id="remarks" name="remarks" rows="4"></textarea>
+            </div>
 
-            <input type="submit" value="Submit">
+            <div class="mb-3">
+                <label class="form-label">Hobbies:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="hobbies" id="singing" value="Singing"> Singing
+                    <!-- <label class="form-check-label" for="singing">Singing</label> -->
+
+                    <input class="form-check-input" type="checkbox" name="hobbies" id="dancing" value="Dancing"> Dancing
+                    <!-- <label class="form-check-label" for="dancing">Dancing</label> -->
+
+                    <input class="form-check-input" type="checkbox" name="hobbies" id="swimming" value="Swimming">
+                    Swimming
+                    <!-- <label class="form-check-label" for="swimming">Swimming</label> -->
+                </div>
+            </div>
+            <div class="mb-3">
+                <br>
+                <button type="submit" class="btn btn-custom">Submit</button>
+            </div>
 
         </form>
     </div>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
+
+
+<!-- 
+/* Gender options */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="radio"]+label {
+    margin-right: 15px;
+} -->
