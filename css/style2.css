@@ -32,7 +32,8 @@ video {
 
 /* Form container */
 form {
-    width: 400px;
+    /* width: 350px; */
+    width:45%;
     margin: 0 auto;
     padding: 20px;
     background: #fff;

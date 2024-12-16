@@ -17,11 +17,9 @@ header {
 }
 
 
-.navbar {
-    background-color: navy !important;
-    /* Ensures background color is navy */
-
-}
+/* .submenu :hover{
+    text-decoration: underline  !important;
+} */
 
 .navbar .nav-item {
     color: white !important;
@@ -29,14 +27,21 @@ header {
 
 }
 
-.nav-item :hover {
-    color: rgb(53, 54, 54) !important;
+.navbar-nav .nav-item :hover {
+    /* color: rgb(53, 54, 54) !important; */
     background-color: rgb(237, 243, 243);
+    /* text-decoration: underline; */
     
 }
+
 .nav-item a:hover{
     color: rgb(53, 54, 54) !important;
 }
+ .navbar-nav .dropdown-menu .dropdown-item:hover{
+    color: rgb(110, 71, 216) !important;
+
+}
+
 
 
 .navbar .nav-link {
@@ -107,7 +112,7 @@ iframe {
 
 }
 
-.footer-list li a {
+.unstyled a {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
@@ -119,9 +124,6 @@ iframe {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
 }
 
@@ -129,7 +131,7 @@ footer {
     display: flex;
     list-style: none;
     color: white;
-    background-color: navy;
+    /* background-color: black; */
 
 }
 
@@ -202,3 +204,13 @@ p {
         /* Increased height for medium-sized screens */
     }
 }
+
+
+/* Card */
+.hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }

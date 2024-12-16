@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <h1> Live Virtual Class</h1>
     </header>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar bg-dark navbar-expand-lg">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,8 +65,8 @@
                                         <li><a class="dropdown-item" href="courses/express.html"
                                                 target="frm1">Express</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="courses/angular.html"
-                                                target="frm1">Angular</a></li>
+                                        <li><a class="dropdown-item" href="courses/react.html"
+                                                target="frm1">React</a></li>
                                         <li><a class="dropdown-item" href="courses/node.html" target="frm1">React</a>
                                         </li>
                                     </ul>
@@ -101,28 +102,81 @@
 
     <section class="welcome">
         <article id="welcome1">
-            <h1> Welcome to LVC!!!</h1>
+            <h2> Welcome to LVC!!!</h1>
         </article>
         <article id="welcome2">
             <iframe name="frm1" id="frm1" src="about.html"></iframe>
         </article>
     </section>
 
-    <footer>
-        <ul class="footer-list">
-            <li class="important-course"><small><i class="fas fa-book-open"></i> Most Important Courses for
-                    Professionals</small></li>
-            <li><a href="mean.html" target="frm1"><i class="fas fa-database"></i> MEAN Stack</a></li>
-            <li><a href="mern.html" target="frm1"><i class="fas fa-server"></i> MERN Stack</a></li>
-            <li><a href="genai.html" target="frm1"><i class="fas fa-robot"></i> GEN AI</a></li>
-        </ul>
-        <p>Website designed and developed by: Chaithra</p>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white text-center text-lg-start"> -->
+        <footer class="text-white text-center text-lg-start" style="background-color: black;">
+        <div class="container p-4">
+            <ul class="footer-list">
+                <li class="important-course"><small><i class="fas fa-book-open"></i> Most Important Courses for
+                        Professionals</small></li>
+                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                    <img src="images/mean.png" class="card-img-top" alt="Mean Stack" style="height:150px">
+                    <div class="card-body">
+                        <a href="mean.html" target="frm1" class="btn btn-primary"><i class="fas fa-database"></i> MEAN
+                            Stack</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                    <img src="images/mern.png" class="card-img-top" alt="Mern Stack" style="height:150px">
+                    <div class="card-body">
+                        <a href="mern.html" target="frm1" class="btn btn-primary"><i class="fas fa-server"></i> MERN Stack
+                            </a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                    <img src="images/genai.png" class="card-img-top" alt="Gen ai" style="height:150px">
+                    <div class="card-body">
+                        <a href="genai.html" target="frm1" class="btn btn-primary"><i class="fas fa-robot"></i> GEN AI
+                            </a>
+                    </div>
+                </div>
+            </ul>
+            <hr>
+       
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="#!" class="text-white text-decoration-none">Courses</a></li>
+                        <li><a href="#!" class="text-white text-decoration-none">Help</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#!" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="#!" class="text-white text-decoration-none">Code of Conduct</a></li>
+                      </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(20, 20, 20, 0.4);">
+            © 2024 Copyright: Website designed and developed by Chaithra
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
-
-
