@@ -12,7 +12,7 @@ header {
 
 .headerimage {
     max-width: 100%;
-    background: url('../images/HeaderImage.png') no-repeat center;
+    background: url('../images/HeaderImage.jpg') no-repeat center;
     background-size: cover;
 }
 
@@ -214,3 +214,7 @@ p {
   .hover-scale:hover {
     transform: scale(1.05);
   }
+
+img{
+    height:20vh;
+}
