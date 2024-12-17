@@ -7,8 +7,34 @@ body {
 
 header {
     text-align: center;
-    padding: 20px 0;
+
 }
+
+.carousel img {
+    height: 40vh;
+}
+
+.carousel-caption {
+    background-color: rgb(231, 222, 222);
+    opacity: .5;
+}
+
+h1 {
+    padding-bottom: 25px;
+}
+
+.carousel-caption p,
+h1,
+h3 {
+
+    color: black;
+    /* text-shadow: 2px 2px 5px rgba(148, 172, 42, 0.5); */
+    margin-left: 20px;
+}
+
+
+
+
 
 .headerimage {
     max-width: 100%;
@@ -31,17 +57,17 @@ header {
     /* color: rgb(53, 54, 54) !important; */
     background-color: rgb(237, 243, 243);
     /* text-decoration: underline; */
-    
+
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     color: rgb(53, 54, 54) !important;
 }
- .navbar-nav .dropdown-menu .dropdown-item:hover{
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
     color: rgb(110, 71, 216) !important;
 
 }
-
 
 
 .navbar .nav-link {
@@ -63,11 +89,12 @@ header {
 
 }
 
+/* 
 .welcome h1 {
     color: navy;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-left: 20px;
-}
+} */
 
 @keyframes zoomInOut {
     0% {
@@ -85,12 +112,13 @@ header {
     }
 }
 
+/* 
 h1 {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
         -2px -2px 5px rgba(255, 0, 0, 0.5);
-}
+} */
 
 .welcome article#welcome2 {
     width: 69%;
@@ -209,12 +237,12 @@ p {
 /* Card */
 .hover-scale {
     transition: transform 0.3s ease;
-  }
-  
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
+}
 
-img{
-    height:20vh;
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 20vh;
 }
