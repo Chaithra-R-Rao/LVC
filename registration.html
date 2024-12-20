@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style2.css">   
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -13,6 +13,8 @@
     <h2>
         Registration
     </h2>
+
+    <!-- Registration form using form of bootstrap -->
     <div class="container mt-5">
         <form action="#" method="POST">
             <div class="mb-3">
@@ -25,13 +27,12 @@
                     required>
             </div>
 
-
             <div class="mb-3">
                 <label class="form-label">Gender:</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="Gender" id="male" value="Male">Male
                     <input class="form-check-input" type="radio" name="Gender" id="female" value="Female">Female
-          
+
                 </div>
             </div>
             <br>
@@ -53,22 +54,19 @@
                 <label class="form-label">Hobbies:</label>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="hobbies" id="singing" value="Singing"> Singing
-                    <input class="form-check-input" type="checkbox" name="hobbies" id="dancing" value="Dancing"> Dancing            
+                    <input class="form-check-input" type="checkbox" name="hobbies" id="dancing" value="Dancing"> Dancing
                     <input class="form-check-input" type="checkbox" name="hobbies" id="swimming" value="Swimming">
                     Swimming
                 </div>
             </div>
             <div class="mb-3">
                 <br>
-                <button type="submit" class="btn btn-custom">Submit</button>
-            </div>
-
+                <button type="submit" class="btn btn-custom" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Submit</button>
+            </div>     
         </form>
     </div>
 
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
-
 </body>
-
 </html>
-
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->

@@ -28,19 +28,18 @@ h1,
 h3 {
 
     color: black;
-    /* text-shadow: 2px 2px 5px rgba(148, 172, 42, 0.5); */
     margin-left: 20px;
 }
 
 
 
 
-
+/* 
 .headerimage {
     max-width: 100%;
     background: url('../images/HeaderImage.jpg') no-repeat center;
     background-size: cover;
-}
+} */
 
 
 /* .submenu :hover{
@@ -50,14 +49,10 @@ h3 {
 .navbar .nav-item {
     color: white !important;
     padding: 10px 15px !important;
-
 }
 
 .navbar-nav .nav-item :hover {
-    /* color: rgb(53, 54, 54) !important; */
     background-color: rgb(237, 243, 243);
-    /* text-decoration: underline; */
-
 }
 
 .nav-item a:hover {
@@ -66,9 +61,7 @@ h3 {
 
 .navbar-nav .dropdown-menu .dropdown-item:hover {
     color: rgb(110, 71, 216) !important;
-
 }
-
 
 .navbar .nav-link {
     color: white !important;
@@ -88,13 +81,6 @@ h3 {
     padding: 20px;
 
 }
-
-/* 
-.welcome h1 {
-    color: navy;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-left: 20px;
-} */
 
 @keyframes zoomInOut {
     0% {

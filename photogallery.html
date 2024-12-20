@@ -4,100 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery with Lightbox</title>
+    <title>Photo Gallery with Lightbox and Filterable Table</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Lightbox CSS -->
     <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.css">
 
-    <style>
-        .gallery-title {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .lightbox img {
-            cursor: pointer;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .lightbox img:hover {
-            border-color: #000;
-        }
-
-        .gallery-row {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 15px;
-            padding: 10px 0;
-        }
-
-        .gallery-row::-webkit-scrollbar {
-            display: none;
-            /* Optional: Hide scrollbar for better design */
-        }
-
-        .gallery-item {
-            flex: 0 0 auto;
-            max-width: 200px;
-            /* Adjust to control size */
-            padding-right: 5px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-        }
-
-        /* Remove the large gap between the two sections */
-
-        .lightbox+h3 {
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
-        .lightbox:last-child {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <h2 class="gallery-title">Photo Gallery</h2>
 
-        <!-- Images Row -->
-        <h3> Our mentors</h3>
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" class="form-control search-box" placeholder="Search by name or designation">
 
-        <div class="lightbox">
-            <div class="gallery-row">
-                <div class="gallery-item">
-                    <a href="images/Photo1.png" class="glightbox" data-glightbox="title: John Doe <br> Software Engineer">
-                        <img src="images/Photo1.png" alt="Photo 1">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/Photo2.png" class="glightbox" data-glightbox="title: Jane Smith <br> Project Manager">
-                        <img src="images/Photo2.png" alt="Photo 2">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/Photo3.png" class="glightbox" data-glightbox="title: Emily Brown <br> UI/UX Designer">
-                        <img src="images/Photo3.png" alt="Photo 3">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="images/Photo4.png" class="glightbox" data-glightbox="title: Shane  <br> Software Engineer">
-                        <img src="images/Photo4.png" alt="Photo 4">
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!-- Filterable Table -->
+        <table class="table table-bordered table-hover mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Mentor Name</th>
+                    <th>Designation</th>
+                    <th>Profile Picture</th>
+                </tr>
+            </thead>
+            <tbody id="mentorsTable">
+                <tr>
+                    <td>John Doe</td>
+                    <td>Software Engineer</td>
+                    <td>
+                        <a href="images/Photo1.png" class="glightbox" data-glightbox="title: John Doe">
+                            <img src="images/Photo1.png" alt="John Doe" width="50" height="50">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Project Manager</td>
+                    <td>
+                        <a href="images/Photo2.png" class="glightbox" data-glightbox="title: Jane Smith">
+                            <img src="images/Photo2.png" alt="Jane Smith" width="50" height="50">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Emily Brown</td>
+                    <td>UI/UX Designer</td>
+                    <td>
+                        <a href="images/Photo3.png" class="glightbox" data-glightbox="title: Emily Brown">
+                            <img src="images/Photo3.png" alt="Emily Brown" width="50" height="50">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shane Adams</td>
+                    <td>Software Engineer</td>
+                    <td>
+                        <a href="images/Photo4.png" class="glightbox" data-glightbox="title: Shane">
+                            <img src="images/Photo4.png" alt="Shane Adams" width="50" height="50">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- Videos Row -->
         <h3> Videos about our mentors</h3>
 
         <div class="lightbox">
@@ -137,6 +110,9 @@
         </div>
     </div>
 
+
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -144,10 +120,28 @@
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
     <script>
+        // Initialize Lightbox
         const lightbox = GLightbox({
             touchNavigation: true,
             loop: true,
             zoomable: true,
+        });
+
+        // JavaScript for Filtering the Table
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#mentorsTable tr');
+
+            rows.forEach(row => {
+                const name = row.cells[0].textContent.toLowerCase();
+                const designation = row.cells[1].textContent.toLowerCase();
+
+                if (name.includes(filter) || designation.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>

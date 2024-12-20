@@ -1,116 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+.gallery-title {
     text-align: center;
-    background-color: #f4f4f9;
+    margin: 20px 0;
 }
 
-h2 {
-    text-align: center;
+h2,h3{
     color: #4e4caf;
+
 }
 
-table {
-    width: 60%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.search-box {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
 }
 
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-        color: #f4f4f4; 
-    	/* Fallback for browsers that don't support gradients */
-		background:#4286f4;
-		/* For Safari 5.1 to 6.0 */
-		background: -webkit-linear-gradient(bottom left, #373B44,#4286f4);
-		/* For Internet Explorer 10 */
-		background: -ms-linear-gradient(bottom left,#373B44,#4286f4);
-		/* Standard syntax */
-		background: linear-gradient(to top right,#373B44, #4286f4);
-}
-
-td a {
-    color: #3f3e9b;
-    text-decoration: none;
+.lightbox img {
     cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
 }
 
-td a:hover {
-    text-decoration: underline;
+.lightbox img:hover {
+    border-color: #000;
 }
 
-#photo-display {
-    margin-top: 30px;
-}
-
-#photo-display img {
-    max-width: 300px;
-    max-height: 300px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-}
-
-#photo-display p {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-iframe {
-    width: 150px;
-    height: 170px;
-    filter: grayscale(70%);
-}
-
-iframe:hover {
-    filter: grayscale(0%);
-}
-
-/* Video container style */
-.video-message {
+.gallery-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #555;
-    height: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.gallery-row::-webkit-scrollbar {
+    display: none;
+    /* Optional: Hide scrollbar for better design */
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    max-width: 200px;
+    /* Adjust to control size */
+    padding-right: 5px;
+}
+
+.gallery-item img {
     width: 100%;
 }
 
-/* Hide video iframe and show message by default */
-.video-container {
-    display: block;
+/* Remove the large gap between the two sections */
+
+.lightbox+h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-.video-container iframe {
-    display: none;
-    border-radius: 15px;
-    /* Adding rounded borders to the iframe */
-    opacity: 0;
-    filter: grayscale(0%);
-    /* Initially set opacity to 0 */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    /* Smooth fade-in and slide effect */
-    transform: scale(0.9);
-    /* Initial scale (shrink slightly) */
-}
-
-.video-container:target iframe {
-    display: block;
-    opacity: 1;
-    /* Fade in */
-    transform: scale(1);
-    /* Return to normal size */
-}
-
-.video-container:target .video-message {
-    display: none;
+.lightbox:last-child {
+    margin-top: 10px;
 }
