@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
+    overflow-x: hidden;
 }
 
 header {
@@ -11,7 +12,7 @@ header {
 }
 
 .carousel img {
-    height: 40vh;
+    height: 48vh;
 }
 
 .carousel-caption {
@@ -139,13 +140,18 @@ iframe {
 
 footer {
     width: 100%;
+    padding-top: 15px;
 }
 
 .footer-list {
     display: flex;
     list-style: none;
-    color: white;
-    /* background-color: black; */
+    color: black;
+
+}
+
+.footer-list .card {
+    box-shadow: 5px 5px #888888;
 
 }
 
@@ -157,7 +163,6 @@ p {
 
 .important-course {
     animation: zoomInOut 1s infinite;
-
 
 }
 
@@ -231,4 +236,20 @@ p {
 
 .card img {
     height: 20vh;
+}
+
+
+.important-courses-section {
+    background-color: #e7ecf0;
+    padding-top: 10px;
+    /* rgba(173, 200, 211, 0.7); */
+    width: 100%;
+    /* padding: 10px 0; Optional padding for vertical spacing */
+}
+
+.important-courses-section .container {
+    max-width: 1200px;
+    /* Keeps content aligned with other sections */
+    margin: 0 auto;
+    /* Centers the content */
 }

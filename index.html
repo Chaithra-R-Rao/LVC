@@ -14,7 +14,7 @@
   
     <!-- Header Part displaying images through carousel also has a tooltip-->
     <header>
-        <div id="carouselExampleCaptions" class="carousel slide">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -28,7 +28,7 @@
                     <img src="images/Img1.png" class="d-block w-100" alt="...">
 
                     <div class="carousel-caption">
-                        <h1 data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title=" Flexible and accessible virtual sessions designed to accommodate diverse schedules and
+                        <h1 data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title=" Flexible and accessible virtual sessions designed to accommodate diverse schedules and
                         learning needs.">Live Virtual Class</h1>
                     </div>
                 </div>
@@ -155,76 +155,83 @@
         <article id="welcome2">
             <iframe name="frm1" id="frm1" src="about.html"></iframe>
         </article>
+    
     </section>
 
-    <!-- Footer - Uses card & 12 grid column system-->
-    <footer class="text-white text-center text-lg-start" style="background-color: black;">
-        <div class="container p-4">
-            <ul class="footer-list">
-                <li class="important-course"><small><i class="fas fa-book-open"></i> Most Important Courses for
-                        Professionals</small></li>
-                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
-                    <img src="images/mean.jpg" class="card-img-top" alt="Mean Stack">
-                    <div class="card-body">
-                        <a href="mean.html" target="frm1" class="btn btn-primary"><i class="fas fa-database"></i> MEAN
-                            Stack</a>
-                    </div>
-                </div>
 
-                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
-                    <img src="images/mern.jpg" class="card-img-top" alt="Mern Stack">
-                    <div class="card-body">
-                        <a href="mern.html" target="frm1" class="btn btn-primary"><i class="fas fa-server"></i> MERN
-                            Stack
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
-                    <img src="images/genai.jpg" class="card-img-top" alt="Gen ai">
-                    <div class="card-body">
-                        <a href="genai.html" target="frm1" class="btn btn-primary"><i class="fas fa-robot"></i> GEN AI
-                        </a>
-                    </div>
-                </div>
-            </ul>
-            <hr>
-
-            <div class="row text-center">
-                <div class="col-lg-4 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">About</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="contactus.html" class="text-white text-decoration-none" target="frm1">Contact Us</a></li>
-                        <li><a href="blog.html" class="text-white text-decoration-none" target="frm1">Courses</a></li>
-                        <li><a href="help.html" class="text-white text-decoration-none" target="frm1">Help</a></li>
-                    </ul>
-                </div>
-                <!-- col-md-6  -->
-                <div class="col-lg-4 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Quick Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#!" class="text-white text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="#!" class="text-white text-decoration-none">Terms & Conditions</a></li>
-                        <li><a href="#!" class="text-white text-decoration-none">Code of Conduct</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4  mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Follow Us</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-twitter"></i>
-                                Twitter</a></li>
-                        <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-facebook-f"></i>
-                                Facebook</a></li>
-                        <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-instagram"></i>
-                                Instagram</a></li>
-                    </ul>
+    <div class="important-courses-section">    
+    <div class="container p-2" >
+        <ul class="footer-list">
+            <li class="important-course"><small><i class="fas fa-book-open"></i> Most Important Courses for
+                    Professionals</small></li>
+            <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                <img src="images/mean.jpg" class="card-img-top" alt="Mean Stack">
+                <div class="card-body">
+                    <a href="mean.html" target="frm1" class="btn btn-primary"><i class="fas fa-database"></i> MEAN
+                        Stack</a>
                 </div>
             </div>
+
+            <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                <img src="images/mern.jpg" class="card-img-top" alt="Mern Stack">
+                <div class="card-body">
+                    <a href="mern.html" target="frm1" class="btn btn-primary"><i class="fas fa-server"></i> MERN
+                        Stack
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                <img src="images/genai.jpg" class="card-img-top" alt="Gen ai">
+                <div class="card-body">
+                    <a href="genai.html" target="frm1" class="btn btn-primary"><i class="fas fa-robot"></i> GEN AI
+                    </a>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
+
+
+    <!-- Footer - Uses card & 12 grid column system-->
+    <footer class="text-white text-center text-lg-start " style="background-color: #1c1d1f;">
+                
+        <div class="row text-center"  >
+            <div class="col-lg-4 mb-4 mb-md-0">
+                <h5 class="text-uppercase">About</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="contactus.html" class="text-white text-decoration-none" target="frm1">Contact Us</a></li>
+                    <li><a href="blog.html" class="text-white text-decoration-none" target="frm1">Courses</a></li>
+                    <li><a href="help.html" class="text-white text-decoration-none" target="frm1">Help</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Quick Links</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#!" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#!" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                    <li><a href="#!" class="text-white text-decoration-none">Code of Conduct</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4  mb-4 mb-md-0">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-twitter"></i>
+                            Twitter</a></li>
+                    <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-facebook-f"></i>
+                            Facebook</a></li>
+                    <li><a href="#!" class="text-white text-decoration-none"><i class="fab fa-instagram"></i>
+                            Instagram</a></li>
+                </ul>
+            </div>
+                
         </div>
-        <div class="text-center p-3" style="background-color: rgba(20, 20, 20, 0.4);">
+        <hr>
+        <div class="text-center p-3" >
             © 2024 Copyright: Website designed and developed by Chaithra
         </div>
+
     </footer>
 
     <script>
