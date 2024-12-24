@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style2.css">
     <title>Contact Us</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jvalid2.js"></script>
 </head>
 
 <body>
@@ -16,34 +17,35 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5605750487507!2d74.85202737404889!3d12.871634017064183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b1c504f06a5%3A0x9720c6a220d4ecd3!2sImpelsys%20Private%20Limited!5e0!3m2!1sen!2sin!4v1733467012599!5m2!1sen!2sin"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <form action="#" method="POST">
+        <form action="thanks2.html" method="POST">
             <h2>Reach out to us anytime!</h2>
 
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" required>
+                <label for="name" class="form-label">Name <span>*</span></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here"
-                    required>
+                <label for="email" class="form-label">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here">
             </div>
             <div class="mb-3">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject here"
-                    required>
+                <label for="subject" class="form-label">Subject <span>*</span></label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject here">
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                <label for="message" class="form-label">Message <span>*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="4"
+                    placeholder="Enter message here"></textarea>
             </div>
             <div class="mb-3">
                 <br>
-                <button type="submit" class="btn btn-custom" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title=" Submit form">Submit</button>
+                <button type="button" class="btn btn-custom" onclick="validateForm()">Send Message</button>
+          
             </div>
         </form>
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

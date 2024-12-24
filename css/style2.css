@@ -135,6 +135,9 @@ iframe {
     height: 350px;
     width: 45%;
 }
+span{
+    color:red;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
