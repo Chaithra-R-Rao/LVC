@@ -31,6 +31,5 @@ function validateForm() {
     }
 
     // If all validations pass
-    window.location.href = "thanks2.html";
     return true;
 }

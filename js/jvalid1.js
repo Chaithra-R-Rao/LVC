@@ -29,8 +29,6 @@ function jfun1() {
         return false;
     }
 
-    window.location.href = "thanks.html";
-
     return true;
    
 }

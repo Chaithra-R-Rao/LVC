@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style2.css">
     <title>Contact Us</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/jvalid2.js"></script>
 </head>
 
 <body>
@@ -17,7 +16,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5605750487507!2d74.85202737404889!3d12.871634017064183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b1c504f06a5%3A0x9720c6a220d4ecd3!2sImpelsys%20Private%20Limited!5e0!3m2!1sen!2sin!4v1733467012599!5m2!1sen!2sin"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <form action="thanks2.html" method="POST">
+        <form action="thanks2.html" onsubmit="return validateForm()" name="form2">
             <h2>Reach out to us anytime!</h2>
 
             <div class="mb-3">
@@ -39,10 +38,11 @@
             </div>
             <div class="mb-3">
                 <br>
-                <button type="button" class="btn btn-custom" onclick="validateForm()">Send Message</button>
-          
+                <input type="submit" value="Send Message" class="btn btn-custom">
             </div>
         </form>
+        <script src="js/jvalid2.js"></script>
+
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
