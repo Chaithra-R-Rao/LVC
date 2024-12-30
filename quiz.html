@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz</title>
+   <link rel="stylesheet" href="css/quiz.css">
+   <script src="js/quiz.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Web Development Quiz</h2>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. What does HTML stand for?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="HyperText Markup Language"> HyperText Markup Language</li>
+                    <li><input type="radio" name="q1" value="HighText Machine Language"> HighText Machine Language</li>
+                    <li><input type="radio" name="q1" value="HyperTool Machine Language"> HyperTool Machine Language</li>
+                </ul>
+           
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. What is the purpose of CSS?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="To structure web pages"> To structure web pages</li>
+                    <li><input type="radio" name="q2" value="To style web pages"> To style web pages</li>
+                    <li><input type="radio" name="q2" value="To add interactivity to web pages"> To add interactivity to web pages</li>
+                </ul>
+                <!-- <div class="correct-answer" id="q2-answer"></div> -->
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which JavaScript method is used to select an element by its ID?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="getElementById"> getElementById</li>
+                    <li><input type="radio" name="q3" value="querySelector"> querySelector</li>
+                    <li><input type="radio" name="q3" value="getElementsByClassName"> getElementsByClassName</li>
+                </ul>
+                <!-- <div class="correct-answer" id="q3-answer"></div> -->
+            </div>
+
+            <button type="button" class="btn" onclick="calculateScore()">Submit Quiz</button>
+            <button type="button" class="btn" id="retakeBtn" style="display: none;" onclick="retakeQuiz()">Retake Quiz</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+   
+</body>
+</html>

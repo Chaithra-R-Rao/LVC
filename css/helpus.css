@@ -16,29 +16,6 @@ body {
     font-size: 14px;
 }
 
-.faq-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item {
-    margin-bottom: 20px;
-}
-
-.faq-item h3 {
-    color: #4e4caf;
-    margin-bottom: 10px;
-}
-.faq-item p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
-
 .contact-section {
     margin-top: 30px;
     text-align: center;
@@ -59,34 +36,4 @@ body {
 .contact-section a:hover {
     text-decoration: underline;
 }
-
-
-
-
-
-
-/* 
-.contact-section {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.contact-section p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.contact-section a {
-    color: #4e4caf;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-section a:hover {
-    text-decoration: underline;
-}
-
- */
-
 

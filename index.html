@@ -8,6 +8,106 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+    <style>
+        .important-courses-section {
+            position: relative;
+        }
+
+        .select-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+            /* Space below the select */
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #4e4caf;
+            margin-bottom: 0.5rem;
+            /* Space below the label */
+            font-size: 20px;
+        }
+
+        .custom-select {
+            max-width: 300px;
+            width: 100%;
+            padding: 8px 10px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .custom-select:focus {
+            border-color: #4e4caf;
+            box-shadow: 0 0 5px rgba(78, 76, 175, 0.5);
+            outline: none;
+        }
+
+        /* Existing styles remain here */
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+            /* Initially hidden */
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content h2 {
+            color: #4e4caf;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .modal-content input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #4e4caf;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .modal-content button:hover {
+            background-color: #3b3a99;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -78,7 +178,7 @@
                     <ul class="navbar-nav ">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false"><i class="fas fa-graduation-cap"></i>
+                                aria-expanded="false"> <i class="fas fa-book"></i>
                                 All Courses
                             </a>
                             <ul class="dropdown-menu">
@@ -114,7 +214,7 @@
                                         </li>
                                         <li><a class="dropdown-item" href="courses/react.html" target="frm1">React</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="courses/node.html" target="frm1">React</a>
+                                        <li><a class="dropdown-item" href="courses/node.html" target="frm1">Node</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -147,6 +247,11 @@
                             scholarship
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html" target="frm1"><i class="fas fa-pencil-alt"></i>
+                            Quiz
+                        </a>
+                    </li>
 
                 </ul>
             </div>
@@ -167,6 +272,17 @@
 
     <div class="important-courses-section">
         <div class="container p-2">
+
+            <div class="select-container">
+                <label for="referrence" class="form-label">LVC Reference Website:</label>
+                <select class="form-select custom-select" id="referrence" name="referrence" onchange="openReference()">
+                    <option value="">--Select website--</option>
+                    <option value="https://www.google.com/">Google</option>
+                    <option value="https://www.w3schools.com/">W3 Schools</option>
+                    <option value="https://www.geeksforgeeks.org/web-development/">Geeks for Geeks</option>
+                </select>
+            </div>
+
             <ul class="footer-list">
                 <li class="important-course"><small><i class="fas fa-book-open"></i> Most Important Courses for
                         Professionals</small></li>
@@ -241,28 +357,19 @@
 
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Activate all tooltips on the page
-            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-        });
-
-        setTimeout(() => {
-            const width = 420;
-            const height = 260;
-
-            // Calculate the center position
-            const screenWidth = window.screen.width;
-            const screenHeight = window.screen.height;
-
-            const left = (screenWidth - width) / 2;
-            const top = (screenHeight - height) / 2;
-            window.open("subscribe.html", "", `width=${width},height=${height},left=${left},top=${top}`);
-        }, 2000);
-       
-    </script>
-
+    <!-- Modal HTML -->
+    <div class="modal-overlay" id="subscriptionModal">
+        <div class="modal-content">
+            <h2>Subscribe for LVC Scholarship</h2>
+            <p>Get the latest scholarship updates straight to your inbox!</p>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="modal-footer">
+                <button onclick="subscribe()">Subscribe</button>
+                <button onclick="closeModal()" style="background-color:grey;">Close</button>
+            </div>
+            <p id="message" style="color: green; margin-right: 10px;"></p>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 

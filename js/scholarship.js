@@ -1,8 +1,46 @@
 
 function showCondition(){
-window.open("condition.html","_blank","width=650,height=300,left=100,top=100");
+    window.open("condition.html","_blank","width=600,height=270,top=50");
+
+    }
+    
+function validateName() {
+    const nameField = document.getElementById("name");
+    const errorSpan = document.getElementById("name-error"); // Get the error message span
+
+    if (nameField.value.trim() === "") {
+        nameField.classList.add("error-focus");
+        errorSpan.textContent = "Name cannot be blank";
+      
+        nameField.focus();
+        return false;
+    }
+    else {
+        nameField.classList.remove("error-focus"); // Remove the error-focus class
+        errorSpan.textContent = ""; 
+    return true;
+    }
 }
 
+function validateMarks(fieldId) {
+    const field = document.getElementById(fieldId);
+    const value = parseFloat(field.value);
+    const errorSpan = document.getElementById(`${fieldId}-error`); // Get the error message span
+
+
+    if (isNaN(value) || value < 0 || value > 100) {
+        field.classList.add("error-focus");
+        errorSpan.textContent = "Please enter a valid value between 0 and 100.";
+        field.focus();
+        return false;
+    }
+    else {
+        field.classList.remove("error-focus"); // Remove the error-focus class
+        errorSpan.textContent = ""; // Clear error message
+        return true;
+    }
+
+}
 
 function calc() {
     // Get form elements
@@ -69,83 +107,4 @@ function calc() {
                 alert("No scholarship awarded. Total amount to pay is ₹1,00,000.");
             }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById("tenth").addEventListener("change", calc);
-
-// function calc() {
-//     // Get form elements
-//     const name = document.getElementById("name").value.trim();
-//     const math = parseFloat(document.getElementById("math").value);
-//     const engl = parseFloat(document.getElementById("eng").value);
-//     const sci= parseFloat(document.getElementById("sci").value);
-
-//     con com < 0 || com > 100
-//     ) {
-       
-//             alert("Please enter valid marks between 0 and 100 for all subjects.");
-//         return;
-//     }
-
-//      // Calculate 12th percentage
-//      const total = math + engl + sci + com;
-//      const twelthPercentage = (total / 400) * 100;
- 
-//      // Calculate scholarship
-//      let scholarship = 0;
-//      const baseAmount = 10000;
- 
-//      if (tenthGrade === ">90" && twelthPercentage > 90) {
-//          scholarship = baseAmount * 0.5; // 50% off
-//      } else if (tenthGrade === ">90" || (tenthGrade === "90" && twelthPercentage > 80)) {
-//          scholarship = baseAmount * 0.25; // 25% off
-//      } else {
-//          scholarship = 0; // No scholarship
-//      }
- 
-//      const finalAmount = baseAmount - scholarship;
- 
-//      // Display scholarship details
-//      document.getElementById("scholarship").textContent =
-//          scholarship > 0
-//              ? `You got a scholarship of ₹${scholarship.toFixed(2)}! Final amount to pay is ₹${finalAmount.toFixed(2)}.`
-//              : "No scholarship awarded. Total amount to pay is ₹10,000.";
-//             }
-
-
-// st com = parseFloat(document.getElementById("cs").value);
-
-//     // Validate inputs
-//     if (!name) {
-//         alert("Please enter your name.");
-//         return;
-//     }
-//     if (
-//         isNaN(math) ||
-//         math < 0 || math > 100 ||
-//         isNaN(engl) ||
-//         engl < 0 || engl > 100 ||
-//         isNaN(sci) ||
-//         sci < 0 || sci > 100 ||
-//         isNaN(com) ||
-       
-
-
 

@@ -1,0 +1,86 @@
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Form Label Styling */
+.form-label {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Submit Button Styling */
+
+.btn-custom {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4e4caf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background-color: #39217c;
+}
+
+/* Input Fields Styling */
+.form-control {
+    border-radius: 8px;
+}
+
+h5 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #4e4caf;
+}
+
+
+
+.error-focus {
+    border: 2px solid red !important;
+    /* Red border for error */
+}
+
+.error-focus:focus {
+    outline: none;
+    /* Remove default outline */
+    border: 2px solid red;
+    /* Red border on focus */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    /* Optional red glow effect */
+}
+
+.error-message {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: red;
+    /* Red error message */
+    display: block;
+}
