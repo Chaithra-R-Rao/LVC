@@ -67,7 +67,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     font-size: 25px;
-    padding: 20px;
+    padding: 15px;
 
 }
 
@@ -174,7 +174,7 @@ p {
         flex-direction: column;
         /* Stack articles vertically */
         font-size: 20px;
-        padding: 10px;
+        padding: 15px;
     }
 
     .welcome article {
@@ -223,7 +223,6 @@ p {
 
 .important-courses-section .container {
     max-width: 1200px;
-    /* Keeps content aligned with other sections */
     margin: 0 auto;
     /* Centers the content */
 }

@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Activate all tooltips on the page
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-});
-
 setTimeout(() => {
     // Show the modal after 2.5 seconds
     const modal = document.getElementById('subscriptionModal');
