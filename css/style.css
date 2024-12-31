@@ -10,7 +10,9 @@ header {
     text-align: center;
 
 }
-
+h2{
+    margin-left: 20px;
+}
 .carousel img {
     height: 48vh;
 }
@@ -105,10 +107,9 @@ iframe {
 
 }
 
-.unstyled a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
+footer a:hover {
+    color: #ffcc00; /* Change link color on hover */
+    font-size: 1.1em; /* Slightly increase the font size */
 }
 
 .footer-list li a:hover {
@@ -136,12 +137,11 @@ footer {
 p {
     padding: 0;
     text-align: center;
-
 }
 
 .important-course {
     animation: zoomInOut 1s infinite;
-
+    color: #4e4caf;
 }
 
 
@@ -202,7 +202,6 @@ p {
     }
 }
 
-
 /* Card */
 .hover-scale {
     transition: transform 0.3s ease;
@@ -216,13 +215,10 @@ p {
     height: 20vh;
 }
 
-
 .important-courses-section {
     background-color: #e7ecf0;
     padding-top: 10px;
-    /* rgba(173, 200, 211, 0.7); */
     width: 100%;
-    /* padding: 10px 0; Optional padding for vertical spacing */
 }
 
 .important-courses-section .container {
@@ -230,4 +226,99 @@ p {
     /* Keeps content aligned with other sections */
     margin: 0 auto;
     /* Centers the content */
+}
+
+.important-courses-section {
+    position: relative;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    /* Space below the select */
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    /* Space below the label */
+    font-size: 20px;
+}
+
+.custom-select {
+    max-width: 300px;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-select:focus {
+    border-color: #4e4caf;
+    box-shadow: 0 0 5px rgba(78, 76, 175, 0.5);
+    outline: none;
+}
+
+/* Existing styles remain here */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+    /* Initially hidden */
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #4e4caf;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-custom {
+    background-color: #4e4caf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-custom:hover{
+    background-color: #3b3a99;
 }

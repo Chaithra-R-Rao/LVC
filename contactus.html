@@ -21,20 +21,24 @@
 
             <div class="mb-3">
                 <label for="name" class="form-label">Name <span>*</span></label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here">
+                <input type="text" class="form-control" id="name" name="name"  onblur="validateDetails('name')" placeholder="Enter name here">
+                <span id="name-error" class="error-message"></span>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email <span>*</span></label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here">
+                <input type="email" class="form-control" id="email" name="email"  onblur="validateDetails('email')" placeholder="Enter email here">
+                <span id="email-error" class="error-message"></span>
             </div>
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject <span>*</span></label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject here">
+                <input type="text" class="form-control" id="subject" name="subject"  onblur="validateDetails('subject')" placeholder="Enter subject here">
+                <span id="subject-error" class="error-message"></span>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message <span>*</span></label>
-                <textarea class="form-control" id="message" name="message" rows="4"
+                <textarea class="form-control" id="message" name="message" onblur="validateDetails('message')" rows="4"
                     placeholder="Enter message here"></textarea>
+                    <span id="message-error" class="error-message"></span>
             </div>
             <div class="mb-3">
                 <br>

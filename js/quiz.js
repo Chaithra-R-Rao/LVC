@@ -5,10 +5,25 @@ const correctAnswers = {
 };
 
 function calculateScore() {
-    let score = 0;
 
     // Get the form
     const form = document.getElementById("quizForm");
+    const radios = form.querySelectorAll('input[type="radio"]');
+    let isAnswered = false;
+
+    // Check if any radio button is selected
+    for (let radio of radios) {
+        if (radio.checked) {
+            isAnswered = true;
+            break;
+        }
+    }
+
+    if (!isAnswered) {
+        alert("Please answer at least one question before submitting!");
+        return;
+    }
+    let score = 0;
 
     // Check each question and show correct/incorrect feedback
     for (let question in correctAnswers) {

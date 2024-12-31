@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/scholarship.css">
     <!-- Link to JavaScript -->
     <script src="js/scholarship.js"></script>
-  
+
 
 </head>
 
@@ -21,43 +21,46 @@
     <div class="container">
         <form method="POST" name="form">
             <div class="mb-3">
-                <label for="name" class="form-label">Name:</label>
+                <label for="name" class="form-label">Name: <span>*</span></label>
                 <input type="text" class="form-control" id="name" name="name" onblur="validateName()"
-                    placeholder="Enter your name " >
-                    <span id="name-error" class="error-message"></span> <!-- Error message span -->
+                    placeholder="Enter your name ">
+                <span id="name-error" class="error-message"></span> <!-- Error message span -->
             </div>
 
             <div class="mb-3 ">
-                <h5>Total Fees for the Course- 100000</h5>
-                <button type="button" class="btn btn-custom btn-primary" onclick="showCondition()">Terms and Conditions for Scholarship</button>
-           
+                <label for="courseFees" class="form-label">
+                    Total Fees for the Course</label>
+                <input type="text" id="courseFees" class="form-control" value="100000" readonly><br>
+                <button type="button" class="btn btn-custom btn-primary" onclick="showCondition()">Terms and Conditions
+                    for Scholarship</button>
             </div>
-         
 
             <h5>Marks in 12th Grade:</h5>
             <div class="mb-3">
-                <label for="math" class="form-label">Maths:</label>
+                <label for="math" class="form-label">Maths: <span>*</span></label>
                 <input type="number" class="form-control" onblur="validateMarks('math')" id="math" name="math"
                     placeholder="Enter Maths mark">
                 <span id="math-error" class="error-message"></span> <!-- Error message span -->
 
             </div>
             <div class="mb-3">
-                <label for="eng" class="form-label">English:</label>
+                <label for="eng" class="form-label">English: <span>*</span></label>
                 <input type="number" class="form-control" onblur="validateMarks('eng')" id="eng" name="eng"
                     placeholder="Enter English mark">
                 <span id="eng-error" class="error-message"></span> <!-- Error message span -->
 
             </div>
             <div class="mb-3">
-                <label for="sci" class="form-label">Science:</label>
-                <input type="number" class="form-control" id="sci"  onblur="validateMarks('sci')" name="sci" placeholder="Enter Science mark" >
+                <label for="sci" class="form-label">Science: <span>*</span></label>
+                <input type="number" class="form-control" id="sci" onblur="validateMarks('sci')" name="sci"
+                    placeholder="Enter Science mark">
                 <span id="sci-error" class="error-message"></span> <!-- Error message span -->
 
             </div>
             <div class="mb-3">
-                <label for="cs" class="form-label">Computer:</label>
-                <input type="number" class="form-control"  onblur="validateMarks('cs')" id="cs" name="cs" placeholder="Enter CS mark" >
+                <label for="cs" class="form-label">Computer: <span>*</span></label>
+                <input type="number" class="form-control" onblur="validateMarks('cs')" id="cs" name="cs"
+                    placeholder="Enter CS mark">
                 <span id="cs-error" class="error-message"></span> <!-- Error message span -->
 
             </div>

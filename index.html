@@ -10,101 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js"></script>
     <style>
-        .important-courses-section {
-            position: relative;
-        }
-
-        .select-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 2rem;
-            /* Space below the select */
-        }
-
-        .form-label {
-            font-weight: bold;
-            color: #4e4caf;
-            margin-bottom: 0.5rem;
-            /* Space below the label */
-            font-size: 20px;
-        }
-
-        .custom-select {
-            max-width: 300px;
-            width: 100%;
-            padding: 8px 10px;
-            font-size: 1rem;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .custom-select:focus {
-            border-color: #4e4caf;
-            box-shadow: 0 0 5px rgba(78, 76, 175, 0.5);
-            outline: none;
-        }
-
-        /* Existing styles remain here */
-
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            display: none;
-            /* Initially hidden */
-        }
-
-        .modal-content {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal-content h2 {
-            color: #4e4caf;
-            margin-bottom: 10px;
-        }
-
-        .modal-content p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .modal-content input[type="email"] {
-            width: 90%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .modal-content button {
-            background-color: #4e4caf;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        .modal-content button:hover {
-            background-color: #3b3a99;
-        }
+     
     </style>
 
 
@@ -272,7 +178,6 @@
 
     <div class="important-courses-section">
         <div class="container p-2">
-
             <div class="select-container">
                 <label for="referrence" class="form-label">LVC Reference Website:</label>
                 <select class="form-select custom-select" id="referrence" name="referrence" onchange="openReference()">
@@ -281,39 +186,39 @@
                     <option value="https://www.w3schools.com/">W3 Schools</option>
                     <option value="https://www.geeksforgeeks.org/web-development/">Geeks for Geeks</option>
                 </select>
+                </form>
             </div>
 
             <ul class="footer-list">
                 <li class="important-course"><small><i class="fas fa-book-open"></i> Most Important Courses for
                         Professionals</small></li>
-                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                <div class="card mb-4 me-4 hover-scale " style="width: 16rem;">
                     <img src="images/mean.jpg" class="card-img-top" alt="Mean Stack">
-                    <div class="card-body">
-                        <a href="mean.html" target="frm1" class="btn btn-primary"><i class="fas fa-database"></i> MEAN
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="mean.html" target="frm1" class="btn  btn-primary btn-custom"><i class="fas fa-database"></i> MEAN
                             Stack</a>
                     </div>
                 </div>
 
-                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                <div class="card mb-4 me-4 hover-scale " style="width: 16rem;">
                     <img src="images/mern.jpg" class="card-img-top" alt="Mern Stack">
-                    <div class="card-body">
-                        <a href="mern.html" target="frm1" class="btn btn-primary"><i class="fas fa-server"></i> MERN
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="mern.html" target="frm1" class="btn  btn-primary btn-custom" ><i class="fas fa-server"></i> MERN
                             Stack
                         </a>
                     </div>
                 </div>
 
-                <div class="card mb-4 me-4 hover-scale " style="width: 18rem;">
+                <div class="card mb-4 me-4 hover-scale " style="width: 16rem;">
                     <img src="images/genai.jpg" class="card-img-top" alt="Gen ai">
-                    <div class="card-body">
-                        <a href="genai.html" target="frm1" class="btn btn-primary"><i class="fas fa-robot"></i> GEN AI
+                    <div class="card-body d-flex justify-content-center">
+                        <a href="genai.html" target="frm1" class="btn  btn-primary btn-custom"><i class="fas fa-robot"></i> GEN AI
                         </a>
                     </div>
                 </div>
             </ul>
         </div>
     </div>
-
 
     <!-- Footer - Uses card & 12 grid column system-->
     <footer class="text-white text-center text-lg-start " style="background-color: #1c1d1f;">
@@ -333,7 +238,7 @@
                 <ul class="list-unstyled mb-0">
                     <li><a href="#!" class="text-white text-decoration-none">Privacy Policy</a></li>
                     <li><a href="#!" class="text-white text-decoration-none">Terms & Conditions</a></li>
-                    <li><a href="#!" class="text-white text-decoration-none">Code of Conduct</a></li>
+                    <li><a href="browser.html" class="text-white text-decoration-none" target="frm1">Browser Details</a></li>
                 </ul>
             </div>
 
@@ -364,8 +269,8 @@
             <p>Get the latest scholarship updates straight to your inbox!</p>
             <input type="email" id="email" placeholder="Enter your email" required>
             <div class="modal-footer">
-                <button onclick="subscribe()">Subscribe</button>
-                <button onclick="closeModal()" style="background-color:grey;">Close</button>
+                <button onclick="subscribe()"  class="btn btn-primary btn-custom">Subscribe</button>
+                <button onclick="closeModal()"  class="btn  btn-primary btn-custom" style="background-color:grey;">Close</button>
             </div>
             <p id="message" style="color: green; margin-right: 10px;"></p>
         </div>

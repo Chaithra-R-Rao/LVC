@@ -7,7 +7,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="css/style2.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
+   
 </head>
 
 <body>
@@ -20,11 +20,15 @@
         <form action="thanks.html" name="form" onsubmit="return jfun1();">
             <div class="mb-3">
                 <label for="name" class="form-label">Name: <span>*</span></label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here"  onblur="validateName()">
+                <span id="name-error" class="error-message"></span>
+
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email: <span>*</span></label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here"  onblur="validateEmail()">
+                <span id="email-error" class="error-message"></span>
+
             </div>
 
             <div class="mb-3">
@@ -32,19 +36,23 @@
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="Gender" id="male" value="Male">Male
                     <input class="form-check-input" type="radio" name="Gender" id="female" value="Female">Female
+                    <br>
+                    <span id="gender-error" class="error-message"></span>
 
                 </div>
             </div>
             <br>
             <div class="mb-3">
                 <label for="courses" class="form-label">Courses: <span>*</span></label>
-                <select class="form-select" id="courses" name="courses">
+                <select class="form-select" id="courses" name="courses" onblur="validateCourse()">
                     <option value="">--Select course--</option>
                     <option value="html">HTML</option>
                     <option value="css">CSS</option>
                     <option value="js">JavaScript</option>
                     <option value="angular">Angular</option>
                 </select>
+                <span id="courses-error" class="error-message"></span>
+
             </div>
             <div class="mb-3">
                 <label for="remarks" class="form-label">Remarks:</label>

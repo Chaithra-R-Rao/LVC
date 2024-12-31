@@ -57,7 +57,7 @@ input[type="email"],
 select {
     width: 100%;
     padding: 8px;
-    margin: 5px 0 15px;
+    /* margin: 5px 0 15px; */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
@@ -157,4 +157,12 @@ span{
         width: 100%;
     }
 
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+.form-control.invalid {
+    border-color: red;
 }

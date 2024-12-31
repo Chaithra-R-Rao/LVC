@@ -62,6 +62,9 @@ h2 {
 }
 
 
+span{
+    color:red;
+}
 
 .error-focus {
     border: 2px solid red !important;

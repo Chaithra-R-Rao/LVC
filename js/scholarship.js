@@ -98,7 +98,7 @@ function calc() {
     // Display scholarship details
     document.getElementById("scholarship").textContent =
         scholarship > 0
-            ? `You got a scholarship of ₹${scholarship.toFixed(2)}! Final amount to pay is ₹${finalAmount.toFixed(2)}.`
+            ? ` 🎉 You got a scholarship of ₹${scholarship.toFixed(2)}! Final amount to pay is ₹${finalAmount.toFixed(2)}.`
             : "No scholarship awarded. Total amount to pay is ₹1,00,000.";
 
             if (scholarship > 0) {

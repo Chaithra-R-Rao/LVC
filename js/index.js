@@ -46,20 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 });
 
-// setTimeout(() => {
-//     const width = 420;
-//     const height = 260;
-
-//     // Calculate the center position
-//     const screenWidth = window.screen.width;
-//     const screenHeight = window.screen.height;
-
-//     const left = (screenWidth - width) / 2;
-//     const top = (screenHeight - height) / 2;
-//     window.open("subscribe.html", "", `width=${width},height=${height},left=${left},top=${top}`);
-// }, 2000);
-
-function openReference(){
+function openReference() {
     let ref = document.getElementById('referrence').value;
     window.open(ref, "_blank");
+
 }
